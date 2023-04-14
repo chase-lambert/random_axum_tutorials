@@ -1,0 +1,9 @@
+[workspace]
+
+members = [
+  "hello-world",
+  "generate-random-number",
+  "include-html",
+  "blog-rs",
+  "jph"
+]
