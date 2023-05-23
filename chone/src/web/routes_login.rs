@@ -1,5 +1,4 @@
 use crate::{web::AUTH_TOKEN, Error, Result};
-
 use axum::{routing::post, Json, Router};
 use serde::Deserialize;
 use serde_json::{json, Value};
@@ -16,7 +15,7 @@ async fn api_login(cookies: Cookies, payload: Json<LoginPayload>) -> Result<Json
         return Err(Error::LoginFail);
     }
 
-    cookies.add(Cookie::new(AUTH_TOKEN, "user1-1.exp.sign"));
+    cookies.add(Cookie::new(AUTH_TOKEN, "user-1.exp.sign"));
 
     let body = Json(json!({
         "result": {
